@@ -1,4 +1,7 @@
 # portfolio_5410356
+Email: monica.kenfack.tsamo@ei.thm.de
+Name : Monica Kenfack 
+
 Projekt :  Einrichtung der Entwicklungsumgebung und Git Repository
 
 Ziel : Das Ziel dieses Praktikums ist die Einrichtung einer voll funktionsfähigen Entwicklungsumgebung für Flutter sowie die
