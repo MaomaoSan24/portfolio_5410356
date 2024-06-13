@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_web_app/responsive_widget.dart';
+import 'package:portfolio_5410356/responsive_widget.dart';
+
+//import 'package:portfolio_5410356/main.dart';
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
 
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+  const ProfilePage({super.key});
 
   @override
  Widget build(BuildContext context) {
@@ -25,7 +28,7 @@ class ProfilePage extends StatelessWidget {
       drawer: Drawer(
         child: ListView(
           padding: const EdgeInsets.all(20),
-          children: <Widget>[],
+          children: const <Widget>[],
         ),
       ),
       body: buildBody(context),
@@ -57,7 +60,7 @@ class ProfilePage extends StatelessWidget {
   Widget buildBody(BuildContext context) {
     return SingleChildScrollView(
       child: AnimatedPadding(
-        duration: Duration(seconds: 1),
+        duration: const Duration(seconds: 1),
         padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.1),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -70,7 +73,7 @@ class ProfilePage extends StatelessWidget {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.2,
             ),
-            SocialInfo(),
+            const SocialInfo(),
           ],
         ),
       ),
@@ -98,7 +101,7 @@ List<Widget> navButtons() {
 class NavHeader extends StatelessWidget {
   final List<Widget> navButtons;
 
-  const NavHeader({required this.navButtons});
+  const NavHeader({super.key, required this.navButtons});
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +113,7 @@ class NavHeader extends StatelessWidget {
   }
 
   Widget buildSmallScreen(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
@@ -124,7 +127,7 @@ class NavHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        MKDot(),
+        const MKDot(),
         Row(
           children: navButtons,
         ),
@@ -137,7 +140,7 @@ class NavHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        MKDot(),
+        const MKDot(),
         Row(
           children: navButtons,
         ),
@@ -147,25 +150,28 @@ class NavHeader extends StatelessWidget {
 }
 
 class MKDot extends StatelessWidget {
+  const MKDot({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        Text(
+        const Text(
           "MK MTECHVIRAL",
+          // ignore: deprecated_member_use
           textScaleFactor: 2,
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 5,
         ),
         AnimatedContainer(
-          duration: Duration(seconds: 1),
+          duration: const Duration(seconds: 1),
           height: 8,
           width: 8,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             shape: BoxShape.circle,
             color: Colors.orange,
           ),
@@ -181,27 +187,29 @@ class NavButton extends StatelessWidget {
   final Color color;
 
   const NavButton({
-    Key? key,
+    super.key,
     required this.text,
     required this.onPressed,
     this.color = Colors.orange,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
-      child: Text(text),
       style: OutlinedButton.styleFrom(
         foregroundColor: color, side: BorderSide(
           color: color,
         ),
       ),
       onPressed: onPressed,
+      child: Text(text),
     );
   }
 }
 
 class ProfileInfo extends StatelessWidget {
+  ProfileInfo({super.key});
+
   Widget profileImage(BuildContext context) => Container(
         height: ResponsiveWidget.isSmallScreen(context)
             ? MediaQuery.of(context).size.height * 0.25
@@ -209,7 +217,7 @@ class ProfileInfo extends StatelessWidget {
         width: ResponsiveWidget.isSmallScreen(context)
             ? MediaQuery.of(context).size.height * 0.25
             : MediaQuery.of(context).size.width * 0.25,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           backgroundBlendMode: BlendMode.luminosity,
           color: Colors.deepOrange,
           shape: BoxShape.circle,
@@ -224,50 +232,53 @@ class ProfileInfo extends StatelessWidget {
   final Widget profileData = Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: <Widget>[
-      Text(
+      const Text(
         "Hi there! My name is",
+        // ignore: deprecated_member_use
         textScaleFactor: 2,
         style: TextStyle(color: Colors.orange),
       ),
-      Text(
+      const Text(
         "Monica\nKenfack",
+        // ignore: deprecated_member_use
         textScaleFactor: 5,
         style: TextStyle(
           color: Colors.white,
           fontWeight: FontWeight.bold,
         ),
       ),
-      SizedBox(height: 10),
-      Text(
+      const SizedBox(height: 10),
+      const Text(
         "A Professional Memer.\n"
         "I am also a mediocre Student at the THM Giessen\n",
         softWrap: true,
+        // ignore: deprecated_member_use
         textScaleFactor: 1.5,
         style: TextStyle(color: Colors.white70),
       ),
-      SizedBox(height: 20),
+      const SizedBox(height: 20),
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              shape: StadiumBorder(), backgroundColor: Colors.red,
-              padding: EdgeInsets.all(10),
+              shape: const StadiumBorder(), backgroundColor: Colors.red,
+              padding: const EdgeInsets.all(10),
             ),
-            child: Text("Resume"),
+            child: const Text("Resume"),
             onPressed: () {
               html.window.open(
                   "https://profile.indeed.com/resume", "");
             },
           ),
-          SizedBox(width: 20),
+          const SizedBox(width: 20),
           OutlinedButton(
             style: OutlinedButton.styleFrom(
-              foregroundColor: Colors.red, shape: StadiumBorder(),
-              side: BorderSide(color: Colors.red),
-              padding: EdgeInsets.all(10),
+              foregroundColor: Colors.red, shape: const StadiumBorder(),
+              side: const BorderSide(color: Colors.red),
+              padding: const EdgeInsets.all(10),
             ),
-            child: Text("Say Hi!"),
+            child: const Text("Say Hi!"),
             onPressed: () {
               html.window.open("https://profile.indeed.com/?hl=de_DE&co=DE&from=gnav-jobseeker-profile--profile-one-frontend", "MK");
             },
@@ -306,6 +317,8 @@ class ProfileInfo extends StatelessWidget {
 }
 
 class SocialInfo extends StatelessWidget {
+  const SocialInfo({super.key});
+
   List<Widget> socialMediaWidgets() {
     return [
       NavButton(
@@ -332,7 +345,7 @@ class SocialInfo extends StatelessWidget {
     ];
   }
 
-  Widget copyRightText() => Text(
+  Widget copyRightText() => const Text(
         "Monica Kenfack ©️2024",
         textAlign: TextAlign.center,
         style: TextStyle(
