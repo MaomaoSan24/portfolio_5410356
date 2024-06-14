@@ -229,7 +229,7 @@ class ProfileInfo extends StatelessWidget {
           color:  Color.fromRGBO(255, 152, 0, 1),
           shape: BoxShape.circle,
           image: DecorationImage(
-            image: AssetImage("Snowman duck cool copy.JPG"),
+            image: AssetImage("IMG_9256(1).jpg"),
             alignment: Alignment.center,
             fit: BoxFit.cover,
           ),
