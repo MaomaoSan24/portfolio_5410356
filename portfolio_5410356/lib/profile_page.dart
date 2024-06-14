@@ -20,10 +20,10 @@ class ProfilePage extends StatelessWidget {
 
   Widget buildSmallScreen(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
       ),
       drawer: Drawer(
         child: ListView(
@@ -37,10 +37,10 @@ class ProfilePage extends StatelessWidget {
 
   Widget buildMediumScreen(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
       ),
       body: buildBody(context),
     );
@@ -48,10 +48,10 @@ class ProfilePage extends StatelessWidget {
 
   Widget buildLargeScreen(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
       ),
       body: buildBody(context),
     );
@@ -85,15 +85,22 @@ List<Widget> navButtons() {
   return [
     NavButton(
       text: "Home",
-      onPressed: () {},
+      onPressed: () {
+         html.window.open("", "Pk");
+      },
     ),
     NavButton(
       text: "Projects",
-      onPressed: () {},
+      onPressed: () {
+ html.window.open("https://indigo-dixie-48.tiiny.site/", "MK");
+
+      },
     ),
     NavButton(
       text: "Contact",
-      onPressed: () {},
+      onPressed: () {
+        html.window.open("mailto:monica.kenfack@gmail.com", "MK");
+      },
     ),
   ];
 }
@@ -157,7 +164,7 @@ class MKDot extends StatelessWidget {
     return Row(
       children: <Widget>[
         const Text(
-          "MK MTECHVIRAL",
+          "MKT",
           // ignore: deprecated_member_use
           textScaleFactor: 2,
           style: TextStyle(
@@ -173,7 +180,7 @@ class MKDot extends StatelessWidget {
           width: 8,
           decoration: const BoxDecoration(
             shape: BoxShape.circle,
-            color: Colors.orange,
+            color: Color.fromARGB(255, 225, 147, 3),
           ),
         ),
       ],
@@ -190,7 +197,7 @@ class NavButton extends StatelessWidget {
     super.key,
     required this.text,
     required this.onPressed,
-    this.color = Colors.orange,
+    this.color = const Color.fromRGBO(255, 152, 0, 1),
   });
 
   @override
@@ -219,10 +226,10 @@ class ProfileInfo extends StatelessWidget {
             : MediaQuery.of(context).size.width * 0.25,
         decoration: const BoxDecoration(
           backgroundBlendMode: BlendMode.luminosity,
-          color: Colors.deepOrange,
+          color:  Color.fromRGBO(255, 152, 0, 1),
           shape: BoxShape.circle,
           image: DecorationImage(
-            image: AssetImage("Snowman duck cool.JPG"),
+            image: AssetImage("image.png"),
             alignment: Alignment.center,
             fit: BoxFit.cover,
           ),
@@ -236,25 +243,25 @@ class ProfileInfo extends StatelessWidget {
         "Hi there! My name is",
         // ignore: deprecated_member_use
         textScaleFactor: 2,
-        style: TextStyle(color: Colors.orange),
+        style: TextStyle(color: Color.fromRGBO(255, 152, 0, 1)),
       ),
       const Text(
         "Monica\nKenfack",
         // ignore: deprecated_member_use
         textScaleFactor: 5,
         style: TextStyle(
-          color: Colors.white,
+          color: Colors.black,
           fontWeight: FontWeight.bold,
         ),
       ),
       const SizedBox(height: 10),
       const Text(
         "A Professional Memer.\n"
-        "I am also a mediocre Student at the THM Giessen\n",
+        "Student at the THM Giessen\n",
         softWrap: true,
         // ignore: deprecated_member_use
         textScaleFactor: 1.5,
-        style: TextStyle(color: Colors.white70),
+        style: TextStyle(color: Colors.black),
       ),
       const SizedBox(height: 20),
       Row(
@@ -262,25 +269,25 @@ class ProfileInfo extends StatelessWidget {
         children: <Widget>[
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              shape: const StadiumBorder(), backgroundColor: Colors.red,
+              shape: const StadiumBorder(), backgroundColor: const Color.fromRGBO(255, 152, 0, 1),
               padding: const EdgeInsets.all(10),
             ),
             child: const Text("Resume"),
             onPressed: () {
               html.window.open(
-                  "https://profile.indeed.com/resume", "");
+                  "https://indigo-dixie-48.tiiny.site/", "");
             },
           ),
           const SizedBox(width: 20),
           OutlinedButton(
             style: OutlinedButton.styleFrom(
-              foregroundColor: Colors.red, shape: const StadiumBorder(),
-              side: const BorderSide(color: Colors.red),
+              foregroundColor: Colors.black, shape: const StadiumBorder(), //changed color from white to black
+              side: const BorderSide(color: Color.fromRGBO(255, 152, 0, 1)),
               padding: const EdgeInsets.all(10),
             ),
             child: const Text("Say Hi!"),
             onPressed: () {
-              html.window.open("https://profile.indeed.com/?hl=de_DE&co=DE&from=gnav-jobseeker-profile--profile-one-frontend", "MK");
+              html.window.open("mailto:monica.kenfack@gmail.com", "MK");
             },
           ),
         ],
@@ -326,21 +333,21 @@ class SocialInfo extends StatelessWidget {
         onPressed: () {
           html.window.open("https://github.com/MaomaoSan24", "Git");
         },
-        color: Colors.blue,
+        color: Colors.black,
       ),
       NavButton(
         text: "Twitter",
         onPressed: () {
           html.window.open("", "Twitter");
         },
-        color: Colors.blue,
+        color: Colors.black,
       ),
       NavButton(
         text: "Facebook",
         onPressed: () {
           html.window.open("", "Fb");
         },
-        color: Colors.blue,
+        color: Colors.black,
       ),
     ];
   }
