@@ -22,6 +22,6 @@ flutter:
   uses-material-design: true
 
   assets:
-  - C:\src\flutter\dev\portfolio_5410356\portfolio_5410356\web\assets\IMG_9256(1).jpg
+  - assets/IMG_9256(1).jpg
   
     
