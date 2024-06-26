@@ -230,7 +230,7 @@ class ProfileInfo extends StatelessWidget {
           color:  Color.fromRGBO(255, 152, 0, 1),
           shape: BoxShape.circle,
           image: DecorationImage(
-            image: AssetImage("IMG_9256(1).jpg"),
+            image: AssetImage("IMG9256.jpg"),
             alignment: Alignment.center,
             fit: BoxFit.cover,
           ),
