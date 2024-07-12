@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "373499303449",
+    "project_id": "praktikumsblatt3-9fa26",
+    "storage_bucket": "praktikumsblatt3-9fa26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373499303449:android:48e39679396c4e94f4fc88",
+        "android_client_info": {
+          "package_name": "com.example.portfolio_5410356"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG60XUUPNQoR6XRmm3DU8nYCgU-MrUBCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
