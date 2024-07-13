@@ -4,9 +4,9 @@ A new Flutter project.
 
 ## Firebase deploy:
 praktikumsblatt3-f0af7.web.app
-Default
+
 praktikumsblatt3-f0af7.firebaseapp.com
-Default 
+
 
 ## Getting Started
 
